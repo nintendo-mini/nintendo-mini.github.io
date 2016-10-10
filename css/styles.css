@@ -372,7 +372,7 @@ html a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 body {
-  font: 400 16px/1.2em 'Ubuntu', sans-serif;
+  font: 400 16px/1.4em 'Ubuntu', sans-serif;
   color: #fff;
   background: #111;
 }
@@ -407,6 +407,47 @@ a {
 }
 .clearfix:after {
   clear: both;
+}
+.containing-block {
+  position: relative;
+}
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  background-image: url(../img/grid.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  z-index: 100;
+  position: relative;
+}
+.hero__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+0,111111+100&0+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(17, 17, 17, 0) 0%, #111111 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00111111', endColorstr='#111111', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+#box3d,
+#box3d > canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .main-header {
   *zoom: 1;
@@ -477,33 +518,6 @@ a {
 .main-nav a:hover {
   color: #ed219e;
 }
-.hero {
-  width: 100%;
-  min-height: 80vh;
-  background-image: url(../img/grid.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  z-index: 100;
-  position: relative;
-}
-.hero__container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+0,111111+100&0+0,1+100 */
-  background: -moz-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
-  /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, rgba(17, 17, 17, 0) 0%, #111111 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00111111', endColorstr='#111111', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
 .hero h1 {
   text-align: center;
   font-size: 3rem;
@@ -513,6 +527,11 @@ a {
 }
 .sketchfab-embed-wrapper {
   margin: 0 auto;
+}
+.content-block--initial {
+  position: relative;
+  margin-top: -2rem;
+  z-index: 100;
 }
 .content-block + .content-block {
   margin-top: 4rem;
@@ -526,37 +545,95 @@ a {
 .copy {
   font-size: 1.2em;
   line-height: 1.618em;
-  width: 600px;
+  width: 680px;
   max-width: 90%;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 .figure {
   display: block;
-  width: 680px;
-  max-width: 100%;
+  width: 740px;
+  max-width: 90%;
   margin: 2rem auto;
+  position: relative;
 }
 .figure img {
   width: 100%;
 }
 .caption {
+  position: absolute;
+  padding: 2%;
+  right: -5%;
+  bottom: -30px;
   font-size: .875rem;
-  padding: 0 2%;
+  width: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  background-image: linear-gradient(#eeeeee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+  color: #111;
 }
 .caption span {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .caption a {
-  color: #5aebfd;
+  color: #1da1f2;
   white-space: nowrap;
 }
 .caption a i {
   font-size: 1.2em;
   vertical-align: middle;
 }
-.stardust {
+.stardust-bg {
   background-image: url(../img/stardust.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4rem 0;
+}
+.authors-wrapper {
+  margin: 4rem auto;
+  width: 960px;
+  max-width: 100%;
+  *zoom: 1;
+  /* IE 6/7 support */
+}
+.authors-wrapper:before,
+.authors-wrapper:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.authors-wrapper:after {
+  clear: both;
+}
+.author {
+  width: 90%;
+  margin: 0 auto 4rem;
+  max-width: 400px;
+}
+.author img {
+  width: 100%;
+  margin: 0 auto;
+}
+.author p {
+  margin-bottom: .5rem;
+}
+.author a {
+  display: block;
+  margin-bottom: .5rem;
+  color: #1da1f2;
+}
+@media screen and (min-width: 800px) {
+  .author {
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+  }
+}
+.authors-caption {
+  clear: both;
+  text-align: center;
+  padding: 3rem 0;
+}
+.authors-caption a {
+  color: #f29f3e;
 }

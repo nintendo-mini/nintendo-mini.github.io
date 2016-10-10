@@ -81,18 +81,26 @@
 
       <h1>Nintendo Classic Mini</h1>
 
-      <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/2706348f8d7e409b80104617b0d198e2/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe></div>
+      <div id="box3d"></div>
 
     </div>
 
   </section>
 
 
-  <section class="content-block">
+  <section class="content-block content-block--initial">
 
-    <p class="copy">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="copy">
+      <p>
+        The original NES (Nintendo Entertainment System) was released in 1985 and changed the home console game forever. Two years earlier, in 1983, the video game industry crashed worldwide. Remember the E.T. video game for Atari? Well, its epic failure was one of the reasons behind the crash.
+      </p>
+      <p>
+        Today, the NES is considered one of the greatest video game console of all time. And that's why it's making a glorious comeback to your livingroom.
+      </p>
+      <p>
+        The original NES costed $???, you can now get it for $59.99.
+      </p>
+    </div>
 
     <div class="figure">
       <img src="img/nes-ad.jpg" alt="NES ad">
@@ -102,10 +110,48 @@
   </section>
 
 
-  <section class="content-block stardust">
-    <h2 class="content-block__title">The controller</h2>
+  <section class="content-block stardust-bg">
+    <h2 class="content-block__title">The games</h2>
 
   </section>
+
+  <section class="content-block">
+    <h2 class="content-block__title">Authors of this site</h2>
+
+    <div class="authors-wrapper">
+
+      <div class="author">
+        <img src="img/carlos-sanchez.jpg" alt="Carlos Sanchez">
+        <p>Carlos Sanchez is a product designer based in Madrid, Spain. His first Nintendo console was a Super Famicom. Before that, he got a Sega Master System II instead of a NES but he totally regrets.</p>
+        <a href="https://twitter.com/chocotuits" target="_blank"><i class="ion-social-twitter"></i> chocotuits</a>
+        <a href="http://carloscv.com" target="_blank"><i class="ion-monitor"></i> carloscv.com</a>
+      </div>
+
+      <div class="author">
+        <img src="img/emilio-gelardo.jpg" alt="Emilio Gelardo">
+        <p>Emilio Gelardo is a CG artist based in Valencia, Spain. His first Nintendo console was a Game Boy.</p>
+        <a href="https://twitter.com/egpjet3d" target="_blank"><i class="ion-social-twitter"></i> egpjet3d</a>
+      </div>
+
+      <p class="authors-caption">Yeah, the same guys who created <a href="http://howbb8works.com" target="_blank">howbb8works.com</a></p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <script src='vendor/box3d-runtime-combined.min.js'></script>
+  <script src='javascripts/preview.js'></script>
+
+  <script>
+    (function() {
+      showPreview('models/nes-mini');
+    })();
+  </script>
+
+
 
 </body>
 </html>
