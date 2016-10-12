@@ -411,24 +411,58 @@ a {
 .containing-block {
   position: relative;
 }
+.absolute-center {
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.absolute-center-vertical {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
 .hero {
   width: 100%;
-  min-height: 80vh;
-  background-image: url(../img/grid.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  z-index: 100;
-  position: relative;
+  text-align: center;
 }
-.hero__container {
+.hero h1 {
+  text-align: center;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-family: 'sn_neonoireregular', sans-serif;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .hero h1 {
+    font-size: 60px;
+  }
+}
+.hero__bg {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+0,111111+100&0+0,1+100 */
+  height: 70vh;
+  background-image: url(../img/grid.png);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.hero__bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: -moz-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
   /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover, rgba(17, 17, 17, 0) 0%, #111111 100%);
@@ -438,21 +472,123 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00111111', endColorstr='#111111', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-#box3d,
-#box3d > canvas {
+.hero__bg.flickering {
+  animation-name: flicker;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes flicker {
+  from {
+    opacity: 0.5;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  6% {
+    opacity: 0.45;
+  }
+  8% {
+    opacity: 0.55;
+  }
+  10% {
+    opacity: 0.45;
+  }
+  11% {
+    opacity: 0.5;
+  }
+  12% {
+    opacity: 0.65;
+  }
+  14% {
+    opacity: 0.55;
+  }
+  16% {
+    opacity: 0.70;
+  }
+  17% {
+    opacity: 0.55;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  24% {
+    opacity: 0.5;
+  }
+  26% {
+    opacity: 0.69;
+  }
+  28% {
+    opacity: 0.5;
+  }
+  38% {
+    opacity: 0.45;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  42% {
+    opacity: 0.6;
+  }
+  44% {
+    opacity: 0.5;
+  }
+  46% {
+    opacity: 0.5;
+  }
+  56% {
+    opacity: 0.5;
+  }
+  58% {
+    opacity: 0.75;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  68% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: .6;
+    /*peak*/
+  }
+  72% {
+    opacity: 0.5;
+  }
+  93% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: .6;
+    /*peak*/
+  }
+  97% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+.loading {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
 }
 .main-header {
   *zoom: 1;
   /* IE 6/7 support */
   padding: .5rem 2%;
+  position: relative;
+  z-index: 100;
 }
 .main-header:before,
 .main-header:after {
@@ -518,20 +654,31 @@ a {
 .main-nav a:hover {
   color: #ed219e;
 }
-.hero h1 {
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'sn_neonoireregular', sans-serif;
-  margin-bottom: 2rem;
+.box3d-wrapper {
+  width: 100%;
+  height: 80vw;
+  max-height: 800px;
+  min-height: 500px;
+  position: relative;
+  top: -150px;
 }
-.sketchfab-embed-wrapper {
-  margin: 0 auto;
+#box3d,
+#box3d > canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .content-block--initial {
-  position: relative;
-  margin-top: -2rem;
-  z-index: 100;
+  margin-top: -300px;
+}
+.content-block--initial > p {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .content-block + .content-block {
   margin-top: 4rem;
@@ -576,7 +723,7 @@ a {
   margin-right: 5px;
 }
 .caption a {
-  color: #1da1f2;
+  color: #14ebff;
   white-space: nowrap;
 }
 .caption a i {
@@ -620,7 +767,7 @@ a {
 .author a {
   display: block;
   margin-bottom: .5rem;
-  color: #1da1f2;
+  color: #ed219e;
 }
 @media screen and (min-width: 800px) {
   .author {
@@ -635,5 +782,8 @@ a {
   padding: 3rem 0;
 }
 .authors-caption a {
-  color: #f29f3e;
+  color: #14ebff;
+}
+.authors-caption a:hover {
+  text-decoration: none;
 }

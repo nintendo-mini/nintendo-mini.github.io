@@ -409,7 +409,7 @@ const bootstrap = (function() {
       prefabInstance.scaleToSize(1);
 
       // Center the instance.
-      prefabInstance.alignToPosition({ x: 0, y: 0.1, z: 0 }, { x: 0, y: 0.1, z: 0 });
+      prefabInstance.alignToPosition({ x: 0, y: 0.1, z: 0 }, { x: 0, y: 0, z: 0 });
 
       // Add the instance to the scene.
       state.box3d.getObjectById('ROOT_OBJECT_ID').addChild(prefabInstance);
@@ -447,6 +447,12 @@ const bootstrap = (function() {
           z: 0
         }
       }, 'rotation_1');
+
+      state.prefabInstance.load(function() {
+        $('#grid').removeClass('flickering');
+        $('#loading').fadeOut();
+      });
+
     })
     .catch((err) => {
       // An error happened during bootstrap

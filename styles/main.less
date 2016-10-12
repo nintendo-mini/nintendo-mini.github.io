@@ -1,51 +1,168 @@
 
+
 .hero{
   width: 100%;
-  min-height: 80vh;
+  text-align: center;
+}
+
+.hero h1{
+  text-align: center;
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-family: @badass-font;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1200px){
+  .hero h1{
+    font-size: 60px;
+  }
+}
+
+
+.hero__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70vh;
   background-image: url(../img/grid.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
-  z-index: 100;
-  position: relative;
+  background-repeat: no-repeat;
+  z-index: -1;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+0,111111+100&0+0,1+100 */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(17,17,17,0) 0%, rgba(17,17,17,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(17,17,17,0) 0%,rgba(17,17,17,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(17,17,17,0) 0%,rgba(17,17,17,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00111111', endColorstr='#111111',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}
+
+.hero__bg.flickering{
+  animation-name: flicker;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 
-.hero__container{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+0,111111+100&0+0,1+100 */
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(17,17,17,0) 0%, rgba(17,17,17,1) 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(17,17,17,0) 0%,rgba(17,17,17,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center,  rgba(17,17,17,0) 0%,rgba(17,17,17,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00111111', endColorstr='#111111',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+@keyframes flicker {
+	from {
+		opacity: 0.5;
+	}
+	4% {
+		opacity: 0.5;
+	}
+	6% {
+		opacity: 0.45;
+	}
+	8% {
+		opacity: 0.55;
+	}
+	10% {
+		opacity: 0.45;
+	}
+	11% {
+		opacity: 0.5;
+	}
+	12% {
+		opacity: 0.65;
+	}
+	14% {
+		opacity: 0.55;
+	}
+	16% {
+		opacity: 0.70;
+	}
+	17% {
+		opacity: 0.55;
+	}
+	19% {
+		opacity: 0.5;
+	}
+	20% {
+		opacity: 0.5;
+	}
+	24% {
+		opacity: 0.5;
+	}
+	26% {
+		opacity: 0.69;
+	}
+	28% {
+		opacity: 0.5;
+	}
+	38% {
+		opacity: 0.45;
+	}
+	40% {
+		opacity: 0.5;
+	}
+	42% {
+		opacity: 0.6;
+	}
+	44% {
+		opacity: 0.5;
+	}
+	46% {
+		opacity: 0.5;
+	}
+	56% {
+		opacity: 0.5;
+	}
+	58% {
+		opacity: 0.75;
+	}
+	60% {
+		opacity: 0.5;
+	}
+	68% {
+		opacity: 0.5;
+	}
+	70% {
+		opacity: .6; /*peak*/
+	}
+	72% {
+		opacity: 0.5;
+	}
+	93% {
+		opacity: 0.5;
+	}
+	95% {
+		opacity: .6; /*peak*/
+	}
+	97% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 0.5;
+	}
 }
 
 
-
-#box3d, #box3d > canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.loading{
+  .absolute-center-vertical;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
 }
-
-
-
-
 
 
 .main-header{
   .clearfix;
   padding: .5rem 2%;
+  position: relative;
+  z-index: 100;
 }
 
 .main-header__cta{
@@ -88,27 +205,37 @@
 
 
 
-.hero h1{
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-family: @badass-font;
-  margin-bottom: 2rem;
+
+.box3d-wrapper{
+  width: 100%;
+  height: 80vw;
+  max-height: 800px;
+  min-height: 500px;
+  position: relative;
+  top: -150px;
+}
+
+#box3d, #box3d > canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
 
-
-
-
-.sketchfab-embed-wrapper{
-  margin: 0 auto;
-}
 
 .content-block--initial{
-  position: relative; //for z-index
-  margin-top: -2rem;
-  z-index: 100;
+  margin-top: -300px;
+  & > p{
+    text-shadow: 0 0 5px rgba(0,0,0,.5); //bc it overlaps with the grid
+  }
+
 }
 
 .content-block + .content-block{
@@ -128,6 +255,7 @@
   width: 680px;
   max-width: 90%;
   margin: 0 auto;
+
 }
 
 .figure{
@@ -197,7 +325,7 @@
   a{
     display: block;
     margin-bottom: .5rem;
-    color: @blue;
+    color: @pink;
   }
 }
 
@@ -214,6 +342,9 @@
   text-align: center;
   padding: 3rem 0;
   a{
-    color: @orange;
+    color: @blue;
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
