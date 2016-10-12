@@ -1,21 +1,66 @@
 
-
-.hero{
-  width: 100%;
-  text-align: center;
-}
-
-.hero h1{
-  text-align: center;
-  font-size: 5vw;
-  text-transform: uppercase;
-  font-family: @badass-font;
+.main-header{
+  .clearfix;
+  padding: .5rem 2%;
+  position: relative;
+  z-index: 1;
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 1200px){
-  .hero h1{
+.main-header__cta{
+  float: right;
+  background: @pink;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 2em;
+  padding: 0 16px;
+  &:hover{
+    background: lighten(@pink, 10%);
+  }
+}
+
+
+.main-nav{
+  .clearfix;
+  float: left;
+  ul{
+    list-style: none;
+    float: left;
+    .clearfix;
+    li{
+      float: left;
+    }
+  }
+  a{
+    color: #fff;
+    font-weight: 600;
+    line-height: 2em;
+    padding: 0 12px;
+    padding: 0 3vw;
+    &:hover{
+      color: @pink;
+    }
+  }
+}
+
+
+h1{
+  text-align: center;
+  font-size: 40px;
+  font-size: 6.2vw;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-family: @badass-font;
+  background: -webkit-linear-gradient(@orange, @pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1000px){
+  h1{
     font-size: 60px;
+    margin-bottom: 0;
   }
 }
 
@@ -25,6 +70,7 @@
   top: 0;
   left: 0;
   right: 0;
+  height: 600px;
   height: 70vh;
   background-image: url(../img/grid.png);
   background-repeat: no-repeat;
@@ -49,7 +95,7 @@
 
 .hero__bg.flickering{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -57,94 +103,94 @@
 
 @keyframes flicker {
 	from {
+		opacity: 1;
+	}
+	2% {
 		opacity: 0.5;
+	}
+	3% {
+		opacity: 0.45;
 	}
 	4% {
-		opacity: 0.5;
+		opacity: 0.55;
+	}
+	5% {
+		opacity: 0.45;
 	}
 	6% {
-		opacity: 0.45;
+		opacity: 0.5;
+	}
+	7% {
+		opacity: 0.65;
 	}
 	8% {
 		opacity: 0.55;
 	}
+	9% {
+		opacity: 0.70;
+	}
 	10% {
-		opacity: 0.45;
+		opacity: 0.55;
 	}
 	11% {
 		opacity: 0.5;
 	}
 	12% {
-		opacity: 0.65;
-	}
-	14% {
-		opacity: 0.55;
-	}
-	16% {
-		opacity: 0.70;
-	}
-	17% {
-		opacity: 0.55;
-	}
-	19% {
 		opacity: 0.5;
 	}
+	13% {
+		opacity: 0.5;
+	}
+	14% {
+		opacity: 0.69;
+	}
+	15% {
+		opacity: 0.5;
+	}
+	16% {
+		opacity: 0.45;
+	}
 	20% {
+		opacity: 0.5;
+	}
+	21% {
+		opacity: 0.6;
+	}
+	22% {
+		opacity: 0.5;
+	}
+	23% {
 		opacity: 0.5;
 	}
 	24% {
 		opacity: 0.5;
 	}
-	26% {
-		opacity: 0.69;
+	25% {
+		opacity: 0.75;
 	}
-	28% {
+	30% {
 		opacity: 0.5;
 	}
-	38% {
-		opacity: 0.45;
-	}
-	40% {
+	34% {
 		opacity: 0.5;
 	}
-	42% {
-		opacity: 0.6;
+	35% {
+		opacity: .6; /*peak*/
 	}
-	44% {
+	36% {
 		opacity: 0.5;
 	}
 	46% {
 		opacity: 0.5;
 	}
-	56% {
-		opacity: 0.5;
-	}
-	58% {
-		opacity: 0.75;
-	}
-	60% {
-		opacity: 0.5;
-	}
-	68% {
-		opacity: 0.5;
-	}
-	70% {
+	47% {
 		opacity: .6; /*peak*/
 	}
-	72% {
-		opacity: 0.5;
-	}
-	93% {
-		opacity: 0.5;
-	}
-	95% {
-		opacity: .6; /*peak*/
-	}
-	97% {
+	48% {
 		opacity: 0.5;
 	}
 	to {
-		opacity: 0.5;
+		opacity: 1;
 	}
 }
 
@@ -158,61 +204,15 @@
 }
 
 
-.main-header{
-  .clearfix;
-  padding: .5rem 2%;
-  position: relative;
-  z-index: 100;
-}
-
-.main-header__cta{
-  float: right;
-  background: @pink;
-  border-radius: 16px;
-  color: #fff;
-  font-weight: 600;
-  line-height: 2em;
-  padding: 0 16px;
-  &:hover{
-    background: lighten(@pink, 10%);
-  }
-}
-
-
-.main-nav{
-    margin-bottom: 2rem;
-  .clearfix;
-  float: left;
-  ul{
-    list-style: none;
-    float: left;
-    .clearfix;
-    li{
-      float: left;
-    }
-  }
-  a{
-    color: #fff;
-    font-weight: 600;
-    line-height: 2em;
-    padding: 0 12px;
-    padding: 0 3vw;
-    &:hover{
-      color: @pink;
-    }
-  }
-}
-
-
-
 
 .box3d-wrapper{
   width: 100%;
+  height: 600px;
   height: 80vw;
   max-height: 800px;
   min-height: 500px;
   position: relative;
-  top: -150px;
+  top: -130px;
 }
 
 #box3d, #box3d > canvas{
@@ -226,8 +226,6 @@
   margin: 0;
   padding: 0;
 }
-
-
 
 
 .content-block--initial{
@@ -255,35 +253,24 @@
   width: 680px;
   max-width: 90%;
   margin: 0 auto;
-
 }
 
 .figure{
   display: block;
-  width: 740px;
-  max-width: 90%;
-  margin: 2rem auto;
-  .containing-block;
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto;
   img{
     width: 100%;
   }
 }
 
 .caption{
-  position: absolute;
-  padding: 2%;
-  right: -5%;
-  bottom: -30px;
+  padding: 0 20px;
   font-size: .875rem;
-  width: 300px;
-  max-width: 90%;
-  background-color: #fff;
-  background-image:
-  linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 1.2em;
-  color: #111;
   span{
     margin-right: 5px;
+    white-space: nowrap;
   }
   a{
     color: @blue;
@@ -346,5 +333,10 @@
     &:hover{
       text-decoration: none;
     }
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+    height: 3em;
   }
 }

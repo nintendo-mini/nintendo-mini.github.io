@@ -449,8 +449,8 @@ const bootstrap = (function() {
       }, 'rotation_1');
 
       state.prefabInstance.load(function() {
-        $('#grid').removeClass('flickering');
-        $('#loading').fadeOut();
+        // $('#grid').removeClass('flickering');
+        $('#loading').hide();
       });
 
     })
