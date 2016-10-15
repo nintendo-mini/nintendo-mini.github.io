@@ -9,17 +9,21 @@
 
 .main-header__cta{
   float: right;
+}
+
+.btn{
   background: @pink;
   border-radius: 16px;
   color: #fff;
   font-weight: 600;
-  line-height: 2em;
-  padding: 0 16px;
+  line-height: 2;
+  padding: 0 20px;
+  display: inline-block;
+  font-size: 1rem;
   &:hover{
     background: lighten(@pink, 10%);
   }
 }
-
 
 .main-nav{
   .clearfix;
@@ -303,6 +307,12 @@ h1{
     margin-bottom: 2rem;
     padding: 0 10px;
     transition: all 0.5s ease;
+    .containing-block;
+    &:hover{
+      & > .game-overlay{
+        display: block;
+      }
+    }
   }
 }
 
@@ -315,13 +325,59 @@ h1{
 }
 
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 900px){
   .games-list{
     li{
       width: 20%;
     }
   }
 }
+
+.game-overlay{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  right: 10px;
+  background: rgba(0, 0, 0, .7);
+  text-align: left;
+  padding: 10%;
+  overflow: hidden;
+  h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 .5em;
+    line-height: 1.2;
+  }
+  p{
+    margin: 0 0 .5em;
+  }
+}
+
+
+.buy-now{
+  .clearfix;
+  margin: 8rem 0;
+  li{
+    margin-bottom: 2rem;
+    padding: 0 2%;
+    text-align: center;
+    .btn{
+      line-height: 3;
+      border-radius: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 600px){
+  .buy-now{
+    li{
+      text-align: left;
+    }
+  }
+}
+
 
 .authors-wrapper{
   margin: 4rem auto;
@@ -370,5 +426,17 @@ h1{
     display: block;
     margin: 0 auto;
     height: 3em;
+  }
+}
+
+
+.col-sm-6{
+  width: 100%;
+}
+
+@media screen and (min-width: 600px){
+  .col-sm-6{
+    width: 50%;
+    float: left;
   }
 }
