@@ -51,7 +51,7 @@
 h1{
   text-align: center;
   font-size: 40px;
-  font-size: 6.2vw;
+  font-size: 14vw;
   margin-bottom: .5em;
   text-transform: uppercase;
   font-family: @badass-font;
@@ -60,11 +60,19 @@ h1{
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 600px){
   h1{
-    font-size: 60px;
+    font-size: 80px;
     margin-bottom: 0;
   }
+}
+
+h2{
+  margin-bottom: .5em;
+}
+
+h3{
+  text-align: center;
 }
 
 
@@ -218,6 +226,12 @@ h1{
   top: -130px;
 }
 
+@media screen and (max-width: 600px){
+  .box3d-wrapper{
+    pointer-events: none;
+  }
+}
+
 #box3d, #box3d > canvas{
   position: absolute;
   top: 0;
@@ -230,6 +244,19 @@ h1{
   padding: 0;
 }
 
+.webgl-fallback{
+  display: none;
+  width: 75%;
+  max-width: 750px;
+  min-width: 330px;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-60%);
+      -ms-transform: translate(-50%,-60%);
+          transform: translate(-50%,-60%);
+  text-align: center;
+  font-size: .875rem;
+}
 
 .content-block--initial{
   margin-top: -300px;
@@ -253,7 +280,7 @@ h1{
 .copy{
   font-size: 1.2em;
   line-height: 1.618em;
-  width: 680px;
+  width: 720px;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -261,7 +288,7 @@ h1{
 .figure{
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 820px;
   margin: 4rem auto;
   img{
     width: 100%;
@@ -295,7 +322,7 @@ h1{
 
 .games-list{
   list-style: none;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   padding: 0;
   .clearfix;
   width: 90%;
@@ -349,6 +376,7 @@ h1{
     font-size: 1.3rem;
     margin: 0 0 .5em;
     line-height: 1.2;
+    text-align: left;
   }
   p{
     margin: 0 0 .5em;
@@ -357,15 +385,22 @@ h1{
 
 
 .buy-now{
+  width: 90%;
+  max-width: 800px;
   .clearfix;
-  margin: 8rem 0;
+  margin: 8rem auto;
   li{
     margin-bottom: 2rem;
-    padding: 0 2%;
     text-align: center;
+    padding: 2%;
+    font-size: 1.2rem;
+    line-height: 1.5;
     .btn{
       line-height: 3;
       border-radius: 24px;
+    }
+    p{
+      padding: 2% 0;
     }
   }
 }
