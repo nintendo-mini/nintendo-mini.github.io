@@ -906,7 +906,7 @@ h4 {
   max-width: 500px;
 }
 .authors-wrapper {
-  margin: 4rem auto;
+  margin: 4rem auto 0;
   width: 960px;
   max-width: 100%;
   *zoom: 1;
@@ -970,4 +970,23 @@ h4 {
     width: 50%;
     float: left;
   }
+}
+.acknowledgement {
+  padding: 1rem 5%;
+  font-size: .875rem;
+}
+.acknowledgement a {
+  color: #fff;
+  text-decoration: underline;
+}
+.disclaimer {
+  padding: 1rem 5%;
+  font-size: .875rem;
+}
+.disclaimer a {
+  color: #fff;
+  text-decoration: underline;
+}
+.cookies-policy-link {
+  font-size: .875em;
 }
