@@ -538,6 +538,9 @@ h3 {
   margin: 0 auto 1em;
   width: 90%;
 }
+h3 span {
+  white-space: nowrap;
+}
 h4 {
   font-family: 'sn_neonoireregular', sans-serif;
   font-weight: normal;
@@ -905,6 +908,14 @@ h4 {
   margin: 0 auto 8rem;
   max-width: 500px;
 }
+.fb-share-button.fb-share-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.fb-share-button.fb-share-button a {
+  color: #111;
+}
 .authors-wrapper {
   margin: 4rem auto 0;
   width: 960px;
@@ -984,10 +995,11 @@ h4 {
 .acknowledgement a {
   color: #fff;
   text-decoration: underline;
+  white-space: nowrap;
 }
 .disclaimer {
   padding: 1rem 5%;
-  font-size: .875rem;
+  font-size: 1rem;
 }
 .disclaimer a {
   color: #fff;
