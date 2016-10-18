@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>Nintendo Classic Mini</title>
+<title>Nintendo Classic Edition Mini</title>
 
 <meta name="robots" content="noindex, nofollow">
 
@@ -53,8 +53,9 @@
 <![endif]-->
 
 
-<!-- jQuery 2.x does not support Internet Explorer 6, 7, or 8 -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src='vendor/box3d-runtime-combined.min.js'></script>
+<script src='js/global-box-3d.js'></script>
+
 
 
 </head>
@@ -87,9 +88,7 @@
       <img src="img/nes-wireframe.png" alt="Loading">
       <span>Loading 3D</span>
     </div>
-    <div id="webglFallback" class="webgl-fallback">
-      <img src="img/nes-mini.png" alt="NES mini">
-    </div>
+    <div id="webglFallback" class="webgl-fallback"></div>
   </div>
 
   <section class="content-block content-block--initial">
@@ -112,7 +111,7 @@
     </div>
 
     <div class="figure">
-      <img src="img/nes-ad.jpg" alt="NES ad">
+      <img class="lazy" data-original="img/nes-ad.jpg" alt="NES ad">
       <p class="caption"><span>1. the console isn't on</span> <span>2. Super Mario isn't co-op</span> <span>3. the game is on the table</span> <span>4. mom is staring off into regret</span> <a href="https://twitter.com/joeyellis" target="_blank"><i class="ion-social-twitter"></i> joeyellis</a></p>
     </div>
 
@@ -144,7 +143,7 @@
 
     <ul class="games-list">
       <li>
-        <img src="img/games/0-mario-bros-nes.jpg" alt="Mario Bros NES">
+        <img class="lazy" data-original="img/games/0-mario-bros-nes.jpg" alt="Mario Bros NES">
         <div class="game-overlay">
           <h3>Mario Bros.™</h3>
           <p>1986</p>
@@ -152,7 +151,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/1-super-mario-bros-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/1-super-mario-bros-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Super Mario Bros.™</h3>
           <p>1985</p>
@@ -160,7 +159,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/2-super-mario-bros-2-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/2-super-mario-bros-2-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Super Mario Bros.™ 2</h3>
           <p>1988</p>
@@ -168,7 +167,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/3-super-mario-bros-3-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/3-super-mario-bros-3-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Super Mario Bros.™ 3</h3>
           <p>1990</p>
@@ -176,7 +175,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/4-dr-mario-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/4-dr-mario-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Dr. Mario™</h3>
           <p>1990</p>
@@ -184,7 +183,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/5-donkey-kong-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/5-donkey-kong-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Donkey Kong™</h3>
           <p>1986</p>
@@ -192,7 +191,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/6-donkey-kong-jr-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/6-donkey-kong-jr-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Donkey Kong Jr.™</h3>
           <p>1986</p>
@@ -200,7 +199,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/7-pac-man-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/7-pac-man-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>PAC-MAN™</h3>
           <p>1993</p>
@@ -208,7 +207,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/8-kirbys-adventure-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/8-kirbys-adventure-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Kirby's Adventure™</h3>
           <p>1993</p>
@@ -216,7 +215,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/9-bubble-bobble-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/9-bubble-bobble-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Bubble Bobble</h3>
           <p>1988</p>
@@ -224,7 +223,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/10-mega-man-2-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/10-mega-man-2-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Mega Man® 2</h3>
           <p>1989</p>
@@ -232,7 +231,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/11-metroid-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/11-metroid-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Metroid™</h3>
           <p>1987</p>
@@ -240,7 +239,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/12-ghosts-n-goblins-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/12-ghosts-n-goblins-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Ghosts'n Goblins®</h3>
           <p>1986</p>
@@ -248,7 +247,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/13-final-fantasy-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/13-final-fantasy-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Final Fantasy®</h3>
           <p>1990</p>
@@ -256,7 +255,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/14-the-legend-of-zelda-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/14-the-legend-of-zelda-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>The Legend of Zelda™</h3>
           <p>1987</p>
@@ -264,7 +263,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/15-zelda-ii-the-adventure-of-link-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/15-zelda-ii-the-adventure-of-link-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Zelda II: The Adventure of Link™</h3>
           <p>1988</p>
@@ -272,7 +271,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/16-castlevania-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/16-castlevania-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Castlevania™</h3>
           <p>1987</p>
@@ -280,7 +279,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/17-castlevania-ii-simons-quest-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/17-castlevania-ii-simons-quest-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Castlevania II: Simon's Quest™</h3>
           <p>1988</p>
@@ -288,7 +287,7 @@
         </div>
         </li>
       <li>
-        <img src="img/games/18-double-dragon-ii-the-revenge-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/18-double-dragon-ii-the-revenge-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Double Dragon II: The Revenge</h3>
           <p>1990</p>
@@ -296,7 +295,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/19-galaga-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/19-galaga-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Galaga™</h3>
           <p>1988</p>
@@ -304,7 +303,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/20-kid-icarus-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/20-kid-icarus-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Kid Icarus™</h3>
           <p>1987</p>
@@ -312,7 +311,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/21-super-c-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/21-super-c-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>SUPER C™</h3>
           <p>1990</p>
@@ -320,7 +319,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/22-excitebike-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/22-excitebike-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Excitebike™</h3>
           <p>1985</p>
@@ -328,7 +327,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/23-tecmo-bowl-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/23-tecmo-bowl-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Tecmo Bowl</h3>
           <p>1989</p>
@@ -336,7 +335,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/24-punch-out-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/24-punch-out-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Punch-Out!!™ Featuring Mr. Dream</h3>
           <p>1990</p>
@@ -344,7 +343,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/25-balloon-fight-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/25-balloon-fight-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Balloon Fight™</h3>
           <p>1986</p>
@@ -352,7 +351,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/26-ice-climber-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/26-ice-climber-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Ice Climber™</h3>
           <p>1985</p>
@@ -360,7 +359,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/27-star-tropics-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/27-star-tropics-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>StarTropics™</h3>
           <p>1990</p>
@@ -368,7 +367,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/28-ninja-gaiden-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/28-ninja-gaiden-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Ninja Gaiden</h3>
           <p>1989</p>
@@ -376,7 +375,7 @@
         </div>
       </li>
       <li>
-        <img src="img/games/29-gradius-nes.jpg" alt="NES">
+        <img class="lazy" data-original="img/games/29-gradius-nes.jpg" alt="NES">
         <div class="game-overlay">
           <h3>Gradius™</h3>
           <p>1986</p>
@@ -407,7 +406,7 @@
           <a class="btn" href="http://amzn.to/2ecLhCs" target="_blank"><i class="ion-android-cart"></i> Buy on amazon.com</a>
         </li>
         <li class="col-sm-6 center">
-          <img src="img/nintendo-classic-edition-mini.png" alt="NES Classic Edition">
+          <img class="lazy" data-original="img/nintendo-classic-edition-mini.png" alt="NES Classic Edition">
         </li>
       </ul>
 
@@ -424,20 +423,20 @@
     <div class="authors-wrapper">
 
       <div class="author">
-        <img src="img/carlos-sanchez.jpg" alt="Carlos Sanchez">
+        <img class="lazy" data-original="img/carlos-sanchez.jpg" alt="Carlos Sanchez">
         <p>Carlos Sánchez is a product designer based in Madrid, Spain. His first Nintendo console was a Super NES. Before that, he got a Sega Master System II instead of a NES but he totally regrets.</p>
         <a href="https://twitter.com/chocotuits" target="_blank"><i class="ion-social-twitter"></i> chocotuits</a>
         <a href="http://carloscv.com" target="_blank"><i class="ion-monitor"></i> carloscv.com</a>
       </div>
 
       <div class="author">
-        <img src="img/emilio-gelardo.jpg" alt="Emilio Gelardo">
+        <img class="lazy" data-original="img/emilio-gelardo.jpg" alt="Emilio Gelardo">
         <p>Emilio Gelardo is a CG artist based in Valencia, Spain. His first Nintendo console was a Game Boy. He still remembers the first time he played the Pac-Man arcade back in 1982.</p>
         <a href="https://twitter.com/egpjet3d" target="_blank"><i class="ion-social-twitter"></i> egpjet3d</a>
         <a href="http://emigepa.deviantart.com/gallery/" target="_blank"><i class="ion-monitor"></i> DeviantArt</a>
       </div>
 
-      <p class="authors-caption"><img src="img/bb8.png" alt="BB8">The same guys who created <a href="http://howbb8works.com" target="_blank">howbb8works.com</a></p>
+      <p class="authors-caption"><img class="lazy" data-original="img/bb8.png" alt="BB8">The same guys who created <a href="http://howbb8works.com" target="_blank">howbb8works.com</a></p>
 
 
     </div>
@@ -455,9 +454,17 @@
   </section>
 
 
+  <!-- jQuery 2.x does not support Internet Explorer 6, 7, or 8 -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery.lazyload.min.js"></script>
 
-  <script src='vendor/box3d-runtime-combined.min.js'></script>
-  <script src='javascripts/preview.js'></script>
+  <!-- loads images 100px before the appear in the viewport -->
+  <script>
+    $("img.lazy").lazyload({
+      threshold : 200,
+      effect : "fadeIn"
+    });
+  </script>
 
   <script>
     (function() {
@@ -479,7 +486,7 @@
   <script>
     $(function(){
       if( !Box3D.browserCaps.isWebGLEnabled()  ){
-        $('#webglFallback').show();
+        $('#webglFallback').html('<img src="img/nes-mini.png" alt="NES mini">').show();
       }
     });
   </script>
