@@ -518,7 +518,7 @@ a {
   color: #f23e70;
 }
 h1 {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
   font-size: 40px;
   font-size: 14vw;
@@ -741,7 +741,7 @@ h4 {
 }
 .webgl-fallback {
   display: none;
-  width: 75%;
+  width: 65%;
   max-width: 750px;
   min-width: 330px;
   position: absolute;
@@ -750,8 +750,14 @@ h4 {
   -webkit-transform: translate(-50%, -60%);
   -ms-transform: translate(-50%, -60%);
   transform: translate(-50%, -60%);
+  padding-top: 70px;
   text-align: center;
   font-size: .875rem;
+}
+@media screen and (max-width: 500px) {
+  .webgl-fallback {
+    padding-top: 0;
+  }
 }
 .content-block--initial {
   margin-top: -280px;

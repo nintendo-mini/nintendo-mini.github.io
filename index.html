@@ -506,6 +506,7 @@
   <script>
     $(function(){
       if( !Box3D.browserCaps.isWebGLEnabled()  ){
+        $('#loading').hide();
         $('#webglFallback').html('<img src="img/nes-mini.png" alt="NES mini">').show();
       }
     });
