@@ -90,7 +90,7 @@
     <a class="main-header__cta btn" href="http://amzn.to/2ecLhCs" target="_blank">Buy</a>
   </div> -->
 
-  <!-- <a class="fixed-cta btn" href="http://amzn.to/2ecLhCs" target="_blank"><i class="ion-android-cart"></i> Buy</a> -->
+  <!-- <a class="fixed-cta btn amazonLink" href="http://amzn.to/2ecLhCs" target="_blank"><i class="ion-android-cart"></i> Buy</a> -->
 
   <h1>NES Mini</h1>
   <h3>A miniaturized version of Nintendo's 8-bit console, with 30 built-in game classics. Available on <span>November 11</span>.</h3>
@@ -420,7 +420,7 @@
         <li class="col-sm-6">
           <p>The original NES retail price was $99.99 (that's like $220 today) and it came with only one game. Get this one for only $59.99 with 30 games!</p>
           <!-- <a class="btn" href="http://amzn.to/2ecLhCs" target="_blank"><i class="ion-android-cart"></i> Buy on amazon.com</a> -->
-          <a class="btn" href="http://amzn.to/2ecLhCs" target="_blank">Available on November 11</a>
+          <a class="btn amazonLink" href="http://amzn.to/2ecLhCs" target="_blank">Available on November 11</a>
         </li>
         <li class="col-sm-6 center">
           <img class="lazy" data-original="img/nintendo-classic-edition-mini.png" alt="NES Classic Edition">
@@ -537,6 +537,47 @@
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
   <!-- End Cookie Consent plugin -->
+
+  <script src="http://gd.geobytes.com/gd?after=-1&variables=GeobytesLocationCode,GeobytesCode,GeobytesInternet,GeobytesFqcn"></script>
+
+  <script>
+
+
+  $.get("http://getcitydetails.geobytes.com/GetCityDetails?callback=?", function (response) {
+    var country = response.geobytesinternet;
+
+    console.log(country);
+
+    if (country == 'ES' || country == 'es'){
+      amazonLink = "http://amzn.to/2ehue0G"
+    }
+    else if (country == 'CA' || country == 'ca') {
+      amazonLink = "http://amzn.to/2dApEcQ"
+    }
+    else if (country == 'GB' || country == 'gb' || country == 'UK' || country == 'uk') {
+      amazonLink = "https://www.amazon.co.uk/gp/product/B01IFJEWTM/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B01IFJEWTM&linkCode=as2&tag=nintendo-mini07-21"
+    }
+    else if (country == 'DE' || country == 'de') {
+      amazonLink = "https://www.amazon.de/gp/product/B01IFJEWTM/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B01IFJEWTM&linkCode=as2&tag=nintendo-mini017-21"
+    }
+    // else if (country == 'JP' || country == 'jp') {
+    //   amazonLink = ""
+    // }
+    else if (country == 'FR' || country == 'fr') {
+      amazonLink = "https://www.amazon.fr/gp/product/B01IFJEWTM/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B01IFJEWTM&linkCode=as2&tag=nintendo-mini01-21"
+    }
+    else if (country == 'IT' || country == 'it') {
+      amazonLink = "https://www.amazon.it/gp/product/B01IF5M54K/ref=as_li_tf_tl?ie=UTF8&camp=3370&creative=23322&creativeASIN=B01IF5M54K&linkCode=as2&tag=nintendo-mini05-21"
+    }
+
+    $('.amazonLink').attr('href',amazonLink);
+
+  }, "jsonp");
+
+
+  </script>
+
+
 
 
 </body>
