@@ -458,7 +458,7 @@ const bootstrap = (function() {
       });
 
     })
-    .catch((err) => {
+    .catch( function(err) {
       // An error happened during bootstrap
       console.error(err);
     });
