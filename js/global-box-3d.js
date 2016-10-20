@@ -440,7 +440,7 @@ const bootstrap = (function() {
       staticBase: '', // root path of static files
       token: ' '      // forces use of
     })
-    .then((state) => {
+    .then( function(state) {
       // Everything is loaded and ready
       state.prefabInstance.componentRegistry.add('rotate_component', {
         autoRotate: true,
