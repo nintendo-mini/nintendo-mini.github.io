@@ -369,10 +369,11 @@ const bootstrap = (function() {
   function loadModelFromBox(state) {
     const loader = new Box3D.JSONLoader(state.box3d);
 
-    return new Promise((resolve, reject) => {
+    return new Promise(function(resolve, reject) {
       loader.loadFromUrl(`${state.options.apiBase}/${state.options.fileId}/entities.json`)
         .then(function(loadedEntities) {
-          const entityDesc = loadedEntities.find((e) => e.type === 'prefab');
+          const entityDesc = loadedEntities.find(function(e){ return e.type === 'prefab' });
+
 
           if (entityDesc) {
             const prefabAsset = state.box3d.getAssetById(entityDesc.id);
