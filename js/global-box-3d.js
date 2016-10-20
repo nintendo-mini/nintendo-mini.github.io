@@ -301,7 +301,8 @@ const bootstrap = (function() {
     ];
   };
 
-  function initialize(options = {}) {
+  function initialize(options) {
+    options = options || {};
     if (options.apiBase === undefined) {
       return Promise.reject(new Error('Missing apiBase!'));
     }
