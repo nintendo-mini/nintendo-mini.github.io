@@ -422,12 +422,14 @@ const bootstrap = (function() {
     return Promise.reject(new Error('Failed to create prefab instance!'));
   }
 
-  return (options) => initialize(options)
-    .then(configureBox3d)
-    .then(loadApplication)
-    .then(loadModelFromBox)
-    .then(configureImageBasedLighting)
-    .then(createInstance);
+  return function(options) {
+    return initialize(options)
+      .then(configureBox3d)
+      .then(loadApplication)
+      .then(loadModelFromBox)
+      .then(configureImageBasedLighting)
+      .then(createInstance);
+  }
 })();
 
 (function(context) {
