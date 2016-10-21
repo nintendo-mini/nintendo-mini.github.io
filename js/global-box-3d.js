@@ -340,7 +340,7 @@ const bootstrap = (function() {
             position: false
           }
         },
-        resourceLoader,
+        resourceLoader: resourceLoader,
       }, function() {
         resolve(state);
       });
