@@ -1013,6 +1013,8 @@ h4 {
 .disclaimer {
   padding: 1rem 5%;
   font-size: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
 }
 .disclaimer a {
   color: #fff;
@@ -1059,6 +1061,8 @@ h4 {
   animation-timing-function: linear;
 }
 .running-mario {
+  width: 64px;
+  height: 64px;
   position: absolute;
   bottom: 0;
   left: 0;
