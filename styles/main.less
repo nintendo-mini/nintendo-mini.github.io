@@ -100,10 +100,10 @@ h3{
 }
 
 h4{
-  font-family: @badass-font;
+  // font-family: @badass-font;
   font-weight: normal;
-  font-size: 1rem;
-
+  // font-size: 1rem;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 600px){
@@ -249,7 +249,7 @@ h4{
 	from {
 		transform: scale(1);
 	}
-	55%{
+	50%{
 		transform: scale(1.1);
 	}
 	to {
@@ -353,6 +353,19 @@ h4{
   max-width: 90%;
   margin: 0 auto;
 }
+
+.divider{
+  display: block;
+  margin: 1rem auto;
+  height: 4rem;
+  &:hover{
+    transform: scaleX(-1);
+  }
+}
+
+
+
+
 
 .pullout-quote{
   font-size: 1.5em;
@@ -487,7 +500,7 @@ h4{
   text-align: center;
   font-size: .875rem;
   margin: 0 auto 8rem;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 
@@ -593,4 +606,21 @@ h4{
 
 .cookies-policy-link{
   font-size: .875em;
+}
+
+
+.instructions{
+  display: none;
+  .absolute-center;
+  z-index: 1;
+  padding: 0 20px;
+  line-height: 40px;
+  height: 40px;
+  background: rgba(0,0,0,.8);
+  border-radius: 20px;
+  img{
+    height: 1.2em;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+  }
 }

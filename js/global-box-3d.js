@@ -317,7 +317,7 @@ const bootstrap = (function() {
 
     const box3d = new Box3D.Engine();
 
-    return Promise.resolve({ box3d, options });
+    return Promise.resolve({ box3d: box3d, options: options });
   }
 
   function configureBox3d(state) {
@@ -455,6 +455,10 @@ const bootstrap = (function() {
       state.prefabInstance.load(function() {
         // $('#grid').removeClass('flickering');
         $('#loading').hide();
+        $('#instructions').fadeIn();
+        setTimeout(function(){
+        	$('#instructions').fadeOut();
+        }, 3000);
       });
 
     })
