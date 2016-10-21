@@ -417,7 +417,7 @@ const bootstrap = (function() {
       // Add the instance to the scene.
       state.box3d.getObjectById('ROOT_OBJECT_ID').addChild(prefabInstance);
 
-      return Promise.resolve(Object.assign({ prefabInstance }, state));
+      return Promise.resolve(Object.assign({ prefabInstance: prefabInstance }, state));
     }
 
     return Promise.reject(new Error('Failed to create prefab instance!'));
