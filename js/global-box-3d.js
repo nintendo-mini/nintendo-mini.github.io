@@ -370,7 +370,9 @@ const bootstrap = (function() {
     const loader = new Box3D.JSONLoader(state.box3d);
 
     return new Promise(function(resolve, reject) {
-      loader.loadFromUrl(`${state.options.apiBase}/${state.options.fileId}/entities.json`)
+      // loader.loadFromUrl(`${state.options.apiBase}/${state.options.fileId}/entities.json`)
+      loader.loadFromUrl(state.options.apiBase + '/' + state.options.fileId + '/entities.json')
+
         .then(function(loadedEntities) {
           const entityDesc = loadedEntities.find(function(e){ return e.type === 'prefab' });
 
