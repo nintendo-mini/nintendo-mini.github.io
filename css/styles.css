@@ -1045,6 +1045,7 @@ h4 {
 }
 .mario-runway {
   height: 200px;
+  margin-top: 50px;
   position: relative;
   overflow: hidden;
 }
