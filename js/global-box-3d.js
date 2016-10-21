@@ -361,7 +361,7 @@ const bootstrap = (function() {
 
     return new Promise(function(resolve) {
       app.load(function() {
-        resolve(Object.assign({ app, scene }, state));
+        resolve(Object.assign({ app: app, scene: scene }, state));
       });
     });
   }
