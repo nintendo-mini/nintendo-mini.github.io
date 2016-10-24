@@ -84,7 +84,7 @@
   <h1>NES Mini</h1>
   <h3>A miniaturized version of Nintendo's 8-bit console, with 30 built-in game classics. Available on <span>November 11</span>.</h3>
 
-  <div class="box3d-wrapper">
+  <div id="box3dWrapper" class="box3d-wrapper">
     <div id="box3d">
       <div id="instructions" class="instructions"><img src="img/rotate.svg"> Drag the NES to rotate it</div>
     </div>
@@ -494,6 +494,7 @@
     $(function(){
       if(Box3D.isMobile()){
         $('#instructions').remove();
+        $('#box3dWrapper').addClass('touch-disabled');
       }
     });
   </script>
