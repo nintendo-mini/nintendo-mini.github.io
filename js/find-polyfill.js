@@ -16,3 +16,4 @@ Array.prototype.find = Array.prototype.find || function(callback) {
       return element;
     }
   }
+}
