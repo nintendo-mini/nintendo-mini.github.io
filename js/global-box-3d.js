@@ -127,7 +127,7 @@ const bootstrap = (function() {
           stream: false
         },
         representations: [{
-          src: staticBase + 'vendor/matcap.png',
+          src: staticBase + 'js/matcap.png',
           isExternal: true,
           contentType: 'image/png',
           contentEncoding: 'identity',
@@ -146,7 +146,7 @@ const bootstrap = (function() {
           stream: false
         },
         representations: [{
-          src: staticBase + 'vendor/HDR_Env0.png',
+          src: staticBase + 'js/HDR_Env0.png',
           isExternal: true,
           contentType: 'image/png',
           contentEncoding: 'identity',
@@ -166,7 +166,7 @@ const bootstrap = (function() {
           stream: false
         },
         representations: [{
-          src: staticBase + 'vendor/HDR_Env1.png',
+          src: staticBase + 'js/HDR_Env1.png',
           isExternal: true,
           contentType: 'image/png',
           contentEncoding: 'identity',
@@ -186,7 +186,7 @@ const bootstrap = (function() {
           stream: false
         },
         representations: [{
-          src: staticBase + 'vendor/HDR_Env2.png',
+          src: staticBase + 'js/HDR_Env2.png',
           isExternal: true,
           contentType: 'image/png',
           contentEncoding: 'identity',
