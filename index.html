@@ -555,13 +555,13 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
   <!-- End Cookie Consent plugin -->
 
-  <script src="http://gd.geobytes.com/gd?after=-1&variables=GeobytesLocationCode,GeobytesCode,GeobytesInternet,GeobytesFqcn"></script>
 
   <script>
 
 
-  $.get("http://getcitydetails.geobytes.com/GetCityDetails?callback=?", function (response) {
-    var country = response.geobytesinternet;
+  $.get("http://ipinfo.io", function (response) {
+
+        var country = response.country;
 
     console.log(country);
 
